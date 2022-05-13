@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POO 1.1</title>
+</head>
+
+<body>
+
+    <script>
+
+        // Criando uma classe para objetos carro.
+        class Carro {
+
+            // Atributos
+            marca;
+            modelo;
+            cor = 'branco';
+
+            // Métodos
+            ligar(acao) {
+                if (acao == 'on')
+                    document.write('Vrum vrum!');
+                else
+                    document.write('<br>tic');
+            }
+
+            acendeFarol() {
+                document.write('<br>LUZ!');
+            }
+
+        }
+
+        // Criando objetos -> Instância da classe 'Carro'.
+        var fusca = new Carro();
+
+        // Ler a cor do objeto.
+        console.log(fusca.marca, fusca.modelo, fusca.cor);
+
+        // Alterar atributos.
+        fusca.marca = 'Volkswagem';
+        fusca.modelo = '1300';
+        fusca.cor = 'bege';
+
+        // Ler a cor do objeto.
+        console.log(fusca.marca, fusca.modelo, fusca.cor);
+
+        // Cria novo objeto -> Nova instância de 'Carro'.
+        var opala = new Carro();
+        opala.marca = 'Chevrolet';
+        opala.modelo = 'SS';
+        opala.cor = 'rosa';
+
+        // Consultando objeto
+        console.log(fusca, opala);
+
+        // Executando método.
+        fusca.ligar('on');
+        opala.ligar('off');
+        fusca.acendeFarol();
+        opala.acendeFarol();
+
+    </script>
+
+</body>
+
+</html>

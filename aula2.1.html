@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POO 2.1</title>
+</head>
+
+<body>
+
+    <script>
+
+        // Classe que define usuários.
+        class User {
+
+            // Atributos privados.
+            #name = '';
+            #email = '';
+            #password = '';
+
+            // Métodos 'set'.
+            // 'this' faz referência ao próprio opbjeto.
+            setName(name) {
+                this.#name = name;
+            }
+
+            setEmail(email_address) {
+
+                // Valida e-mail
+                if (email_address.indexOf('@') > 0)
+                    this.#email = email_address;
+                else
+                    console.error('E-mail inválido!');
+
+            }
+
+            trocaSenha(x) {
+
+                // Valida a senha.
+                if (this.#testaSenha(x))
+                    this.#password = x;
+                else
+                    console.error('A senha tem que ter "_"');
+            }
+
+            // Método privado que testa a senha.
+            #testaSenha(pass_word) {
+                return (pass_word.indexOf('_') >= 0);
+            }
+
+        }
+
+        // Cria uma instância de 'User'.
+        let joca = new User();
+
+        // Define / altera atributos.
+        joca.setName('Joca Da Silva');
+        joca.setEmail('joca@silva.com');
+        joca.trocaSenha('123_abc');
+
+        // Exibir o objeto.
+        console.log(joca);
+
+        var Mi = new User();
+
+Mi.setName('Milena da gama');
+Mi.setEmail('Mi@Gama.com');
+Mi.trocaSenha('770_mi');
+
+console.log(Mi);
+
+    </script>
+
+</body>
+
+</html>

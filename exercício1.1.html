@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 1.1</title>
+</head>
+
+<body>
+
+    <script>
+        //Classe
+        class Fruit{
+
+         // Atributos
+            #name;
+            #color;
+            #size;
+            #flavor;
+
+         // Setters e Getters
+            setName(name) { 
+                this.#name = name.trim();
+            }
+            getName(){
+                return this.#name;
+            }
+
+            setColor(color) {
+                this.#color = color.trim();
+            }
+            getColor() {
+                return this.#color;
+            }
+            setSize(size) {
+                this.#size = size.trim();
+            }
+            getSize() {
+                return this.#size;
+            }
+            setFlavor(flavor) {
+                this.#flavor = flavor.trim();
+            }
+            getFlavor() {
+                return this.#flavor;
+            }
+        }
+
+        //Objetos
+        var fruit1 = new Fruit();
+
+fruit1.setName('apple');
+fruit1.setColor('red');
+fruit1.setSize('7cm');
+fruit1.setFlavor('delicious');
+
+document.write(`<p> The ${fruit1.getName()} is ${fruit1.getColor()}.</p>`);
+
+        console.log(fruit1);
+        
+
+        var fruit2 = new Fruit();
+
+fruit2.setName('banana');
+fruit2.setColor('yellow');
+fruit2.setSize('10cm');
+fruit2.setFlavor('tasty')
+
+document.write(`<p> The ${fruit2.getName()} is ${fruit2.getColor()}.</p>`);
+
+        console.log(fruit2);
+
+
+
+    </script>
+    
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <body>
+
+    <script>
+
+        class Serie {
+
+            #titulo
+            #lancamento
+            #conclusao
+            #temporadas
+            #canal
+
+            constructor(titulo) { this.#setTitulo(titulo); }
+
+            #setTitulo(titulo) { this.#titulo = titulo; }
+            setLancamento(lancamento) { this.#lancamento = lancamento; }
+            setConclusao(conclusao) { this.#conclusao = conclusao; }
+            setTemporadas(temporadas) { this.#temporadas = temporadas; }
+            setCanal(canal) { this.#canal = canal; }
+
+            getTitulo() { return this.#titulo; }
+            getLancamento() { return this.#lancamento; }
+            getConclusao() { return this.#conclusao; }
+            getTemporadas() { return this.#temporadas; }
+            getCanal() { return this.#canal; }
+
+        }
+
+        var euphoria = new Serie('Euphoria')
+        euphoria.setLancamento('2019')
+        euphoria.setConclusao('em andamento')
+        euphoria.setTemporadas('2')
+        euphoria.setCanal('HBO')
+
+        console.log(euphoria);
+
+        document.write(`
+
+<h4>Série:</h4>
+<ul>
+    <li>Nome: ${euphoria.getTitulo()}</li>
+    <li>Ano: ${euphoria.getLancamento()}</li>
+    <li>Conclusão: ${euphoria.getConclusao()}</li>
+    <li>Temporadas: ${euphoria.getTemporadas()}</li>
+</ul>`);
+
+    </script>
+
+</body>
+
+</html>

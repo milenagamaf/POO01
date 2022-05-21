@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POO 2>1</title>
+</head>
+
+<body>
+
+    <script>
+        class Series{
+            #titulo
+            #temporadas
+
+            constructor(titulo) {this.setTitulo(titulo)
+            }
+
+            setTitulo(titulo) {this.#titulo = titulo}
+            setTemporadas(temporadas) {this.#temporadas = temporadas}
+
+            getTitulo() {return this.#titulo}
+            getTemporads() {return this.#temporadas}
+
+        }
+        class Comedia extends Series{
+            #canal
+            #lancamento
+
+            setCanal(canal) {this.#canal = canal}
+            setLancamento(lancamento) {this.#lancamento = lancamento}
+
+            getCanal() {return this.#canal}
+            getLancamento() {return this.#lancamento}
+        }
+        class Suspense extends Series{
+            #trama
+            #protagonista
+
+            setTrama(trama) {this.#trama = trama}
+            setProtagonista(protagonista) {this.#protagonista = protagonista}
+
+            getTrama() {return this.#trama}
+            getProtagonista() {return this.#protagonista}
+        }
+
+        var filha1 = new Series('Euphoria', '2')
+        filha1.setTemporadas('2')
+        console.log(filha1)
+
+        var filha2 = new Comedia('Friends')
+        filha2.setCanal('HBO')
+        filha2.setLancamento('06/05/1994')
+        filha2.setTemporadas('10')
+        console.log(filha2)
+
+        var filha3 = new Suspense('Quem matou sara?',)
+        filha3.setTemporadas('3')
+        filha3.setTrama('Suspense')
+        filha3.setProtagonista('Sara')
+
+        console.log(filha3)
+    </script>
+    
+</body>
+
+</html>
